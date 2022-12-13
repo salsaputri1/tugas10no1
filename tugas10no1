@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+long int perpangkatan_rekursif(int a, int b);
+
+int main(){
+  int a,b;
+
+  cout << "fungsi rekursif untuk menghitung perpangkatan" << endl;
+  cout << endl;
+  cout << "masukan nilai a = ";
+  cin >> a;
+  cout << "masukan nilai b = ";
+  cin >> b;
+  cout << endl;
+  cout << a << "dipangkatkan " << b << " = " << perpangkatan_rekursif(a,b) << endl;
+}
+
+long int perpangkatan_rekursif(int a, int b){
+  if(b==0){
+    return 1;
+  }else
+  return a* perpangkatan_rekursif(a,b-1);
+  } 
